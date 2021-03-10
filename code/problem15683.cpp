@@ -15,8 +15,7 @@ deque<int> dire;
 int result = 987654321;
 
 deque<deque<int> > solve_check(deque<deque<int> > check,int di,int which, pair<int,int> point){
-    
-    //cout << "di: " << di << "point: " << point.first << " " << point.second << endl;
+  
     check[point.first][point.second] = 1;
     if(which == 1){
         if(di == 0){
@@ -321,15 +320,7 @@ deque<deque<int> > solve_check(deque<deque<int> > check,int di,int which, pair<i
             }
         }
     }
-    /*
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j<M ; j++){
-            cout << check[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;*/
-    //exit(1);
+
     return check;
 }
 
@@ -342,7 +333,6 @@ int count_result(deque<deque<int> > check){
             }
         }
     }
-    //cout << "temp: " << temp << endl;
     return temp;
 }
 int make_direction(int depth,deque<deque<int> > check){

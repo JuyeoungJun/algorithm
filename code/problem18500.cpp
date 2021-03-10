@@ -10,7 +10,6 @@ int R,C;
 char board[101][101];
 
 int checkCluster(int a, int b){
-    // cout << a << " " << b << endl;
     if(a >= R || a < 0 || b>=C || b<0) return 0;
 
     queue<pair<int, int> > q;
@@ -68,15 +67,12 @@ int checkCluster(int a, int b){
     deque<pair<int,int> > temp;
     for(int i = 0; i<R; i++){
         for(int j = 0; j<C; j++){
-            // cout << vistied[i][j] << " ";
             if(vistied[i][j] == 1){
                 board[i][j] = '.';
                 temp.push_back(make_pair(i,j));
             }
         }
-        // cout << endl;
     }
-    // cout << endl;
 
 
     for(int i = 0 ; i<C ; i++){
@@ -91,11 +87,6 @@ int checkCluster(int a, int b){
             if(bo - bbo > 0) distance = min(distance,(bo-bbo));
         }
     }
-    // cout << distance << endl;
-    // for(int i = 0 ; i<C; i++){
-    //     cout << "C: " << i <<endl;
-    //     cout << "M: " << M[i] << "m: " << m[i] << endl;
-    // }
 
     for(int i = 0; i<temp.size(); i++){
         board[temp[i].first+distance-1][temp[i].second] = 'x';
@@ -128,29 +119,18 @@ int destory(int turn, int what){
 
     board[what][b] = '.';
     
-    // cout << "===========================" << endl;
-    // cout << "where: " <<what << " " << b << endl;
     if(b-1 >= 0 && board[what][b-1] == 'x'){
         checkCluster(what,b-1);
     }
     if(b+1 < C && board[what][b+1] == 'x'){
         checkCluster(what,b+1);
     }
-    
     if(what+1 < R && board[what+1][b] =='x'){
         checkCluster(what+1,b);
     }
-    
     if(what-1 >= 0 && board[what-1][b] == 'x'){
         checkCluster(what-1,b);
     }
-    
-    // for(int i = 0; i<R; i++){
-    //     for(int j = 0; j<C; j++){
-    //         cout << board[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
 
     return 0;
 }

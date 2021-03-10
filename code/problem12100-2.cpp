@@ -78,7 +78,6 @@ void mov_board(int direc){
                     tmp.push_back(board[i][j]);
                     board[i][j] = 0;
                 }
-                //cout << tmp.size() << endl;
             }
 
             int index = N-1;
@@ -134,15 +133,7 @@ void make_comb(int depth){
         }
     }
     for(int i = 0; i<4; i++){
-        //cout << "depth: " << depth << endl;
-        mov_board(i);/*
-        for(int j = 0; j<N; j++){
-            for(int k = 0; k<N; k++){
-                cout << board[j][k] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;*/
+        mov_board(i);
         make_comb(depth+1);
         for(int i = 0; i<N; i++){
             for(int j = 0; j<N; j++){

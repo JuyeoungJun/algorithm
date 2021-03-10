@@ -71,7 +71,6 @@ int simulation()
 
 int main()
 {
-	// freopen("input.txt", "r", stdin);
 	ios_base::sync_with_stdio(0); cin.tie(0);
 	cin >> N >> K;
 	register int i, j;

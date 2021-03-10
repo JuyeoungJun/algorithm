@@ -19,7 +19,6 @@ int find_sol(int a, int b){
     while(!q.empty()){
         tempa = q.front().first;
         tempb = q.front().second;
-        //cout << tempa << " " << tempb << endl;
         //위
         if(tempa-1 >= 0 && map[tempa-1][tempb] == 1 && visited[tempa-1][tempb] == 0){
             q.push_back(make_pair(tempa-1,tempb));

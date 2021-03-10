@@ -17,14 +17,8 @@ bool visitedCheck(vector<int> visted,int person)
 }
 
 int findSol(vector<int> visited, int person){
-    /*
-    for(int i = 0; i<visited.size(); i++){
-        cout <<"v:"<< visited[i] << " ";
-    }
-    cout << endl;
-    */
+
     if(visited.size() == 5){
-        //cout << 1;
         fina = 1;
         return 0;
     }

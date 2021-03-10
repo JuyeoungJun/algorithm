@@ -24,7 +24,6 @@ int main(){
     int check[1001];
     int p;
     int sum = 0;
-    //dfs
     vector<int> dfs;
     for(int i = 0; i<N ; i++){
         sort(grap[i].begin(),grap[i].end(),greater<int>());
@@ -33,7 +32,6 @@ int main(){
         check[i] = 0 ;
     }
     dfs.push_back(V-1);
-    //check[V-1] = 1;
     
     while(1){
         if(dfs.empty()){
@@ -55,7 +53,6 @@ int main(){
         for(int i = 0; i<grap[p].size(); i++){
             if(check[grap[p][i]] != 1){
                 dfs.push_back(grap[p][i]);
-                //check[grap[p][i]] = 1;
             }
         }
     }
@@ -77,11 +74,9 @@ int main(){
             cout << "\n";
             return 0;
         }
-        //cout << bfs.size() << endl;
         p = bfs.front();
         cout << p+1 << ' ';
         bfs.pop();
-        //check[p] = 1;
         sum ++;
         if(sum == N){
             cout << "\n";

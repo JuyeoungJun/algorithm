@@ -161,15 +161,7 @@ int main(){
             cin >> map[i][j];
         }
     }
-    /*
-    shift(3);
-    for(int i = 0; i<N;i++){
-        for(int j = 0; j<N; j++){
-            cout << map[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << find_max() << endl;*/
+
     find_sol(0);
     cout << result << endl;
     return 0;

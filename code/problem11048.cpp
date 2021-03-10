@@ -26,16 +26,7 @@ int main(){
     result[0][0] = mapp[0][0];
     result[N-1][M-1] = mapp[N-1][M-1];
     while(1){
-        //cout << q.size() << endl;
-        //cout << q.front().first << " " << q.front().second << endl;
-        /*
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<M ; j++){
-                cout << result[i][j] << " ";
-            }
-            cout << endl;
-        }
-        */
+
         if(q.empty()){
             break;
         }

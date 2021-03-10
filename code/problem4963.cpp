@@ -12,13 +12,10 @@ int result = 0;
 int makeRelated(int a, int b){
     queue<pair<int,int> > q;
     q.push(make_pair(a,b));
-    //cout << "a:" << a << "b:" << b << endl;
-    //cout << map[1][1] << endl;
     while(1){
         if(q.empty()){
             break;
         }
-        //cout << "qsize" << q.size() << endl;
         for(int i = 0; i<8 ; i++){
             if(q.front().first+direction[i].first >= h || q.front().second+direction[i].second >= w){
                 continue;
@@ -27,11 +24,9 @@ int makeRelated(int a, int b){
                 continue;
             }
             if(map[q.front().first+direction[i].first][q.front().second+direction[i].second] == 1){
-                //cout << "x:" << q.front().first+direction[i].first << "y:" <<q.front().second+direction[i].second << endl;
                 q.push(make_pair(q.front().first+direction[i].first,q.front().second+direction[i].second));
                 map[q.front().first+direction[i].first][q.front().second+direction[i].second] = -1;
             }
-            //cout << "0,1:"<< map[0][1] << endl;
         }
         q.pop();
     }
@@ -77,14 +72,6 @@ int main(){
                 cin >> map[i][j];
             }
         }
-       /*
-        for(int i = 0; i<h ; i++){
-            for(int j = 0; j<w ; j++){
-                cout << map[i][j];
-            }
-            cout << endl;
-        }
-        */
         findSol();
         cout << result << endl;
     }

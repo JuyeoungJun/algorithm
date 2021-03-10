@@ -13,17 +13,11 @@ int rresult;
 
 int calculate(){
     int s = 0;
-    //cout << "-----------------------------------------------"<<endl;
+
     for(int i = 0; i<result.size()-1;i++){
         s+=abs(result[i]-result[i+1]);
-        //cout << result[2*i] << " " << result[2*i+1] << endl;
     }
-    //cout << "----------------------------------------------"<<endl;
-    /*
-    if(result.size()%2 == 1){
-        s+=result.back();
-    }*/
-    //cout << s << endl;
+
     return s;
 }
 

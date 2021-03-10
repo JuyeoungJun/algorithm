@@ -14,22 +14,7 @@ int finresult = 0;
 vector<int> order;
 
 int make_order(){
-    //cout << order.size() << endl;
-    /*
-    for(int i = 0; i<9;i++){
-        cout << check[i] << " ";
-    }
-    cout << endl;
-    for(int i = 0; i<order.size();i++){
-        cout << order[i] << " ";
-    }
-    cout << endl;*/
     if(order.size() == 9){
-        /*
-        for(int i = 0; i<9;i++){
-            cout << order[i] << " ";
-        }
-        cout << endl;*/
        int result = 0;
        int outcount = 0;
        int ord = 0;
@@ -38,16 +23,7 @@ int make_order(){
            base[i] = 0;
        }
        for(int i = 0; i<N; i++){
-           //cout << "ining: " << i << endl;
            while(1){
-               /*
-               cout << "ord: "<<ord << endl;
-               cout << "outcount: : " << outcount << endl;
-               cout << "result: " << result << endl;
-               for(int i = 0; i<3; i++){
-                   cout << "i" << i<<": " << base[i] << " ";
-               }
-               cout << endl;*/
                if(play[i][order[ord]] == 0 ){
                    outcount ++;
                    ord = (ord+1)%9;
@@ -117,12 +93,6 @@ int make_order(){
            }
         }
 
-        //cout << "result: " << result << endl;
-        /*
-        if(result == 58){
-            cout << "hi" << endl;
-            exit(1);
-        }*/
         finresult = max(result,finresult);
         return finresult;
     }

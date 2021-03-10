@@ -114,10 +114,7 @@ int main(){
     }
     int tempx,tempy,tempa;
     for(int i = 0; i<M ; i++){
-        //tree tempt;
-        
         cin >> tempx >> tempy >> tempa;
-        //who[tempt.x][tempt.y].push_back(tempt);
         who[tempx-1][tempy-1].push_back(tempa);
     }
     for(int i = 0; i<K; i++){

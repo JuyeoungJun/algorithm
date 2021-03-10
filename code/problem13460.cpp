@@ -63,8 +63,6 @@ int main(){
     while(!q.empty()){
         tempp = q.front();
         visited[tempp.ra][tempp.rb][tempp.ba][tempp.bb] = 1;
-        //cout << "red: " << tempp.ra <<" "<< tempp.rb << endl;
-        //cout << "blue: " << tempp.ba << " " << tempp.bb << endl;
         if(tempp.mov > 10){
             break;
         }
@@ -79,8 +77,6 @@ int main(){
             int tbb = tempp.bb;
             move(tra,trb,i);
             move(tba,tbb,i);
-            //cout << "temp red: " << tra << " " << trb << endl;
-            //cout << "temp blue: " << tba << " " << tbb << endl;
             if(tba == ha && tbb == hb) {
                 continue;
             }

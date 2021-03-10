@@ -30,14 +30,6 @@ int bfs(){
         q.push_back(who[i]);
     }
     while(!q.empty()){
-        /*
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<N; j++){
-                cout << tempmap[i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;*/
         int a = q.front().first;
         int b = q.front().second;
         if(a-1 >= 0 && tempmap[a-1][b] == 0){

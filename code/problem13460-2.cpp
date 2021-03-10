@@ -94,8 +94,6 @@ int make_comb(int depth){
     int temp_ba = ba; 
     int temp_bb = bb;
     for(int i = 0 ; i<4; i++){
-        //cout << "depth: " << depth << endl;
-        //cout <<"red: "<< ra << " " << rb <<  " blue: " << ba << " " << bb << endl;
         result = move_ball(i);
         if(result == 1){
             min_result = min(depth,min_result);

@@ -23,7 +23,6 @@ int main(){
         for(int i = 0; i<k-6;i++){
             ind.push_back(0);
         }
-        //sort(ind.begin(),ind.end());
         do{
             for(int i = 0; i<ind.size();i++){
                 if(ind[i] == 1){

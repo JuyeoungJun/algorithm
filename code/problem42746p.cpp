@@ -28,9 +28,6 @@ int main(){
     numbers.push_back(111);
     numbers.push_back(110);
     numbers.push_back(11);
-    //numbers.push_back(1);
-    //numbers.push_back(0);
-    //numbers.push_back(330034);
 
     solution(numbers);
     return 0;

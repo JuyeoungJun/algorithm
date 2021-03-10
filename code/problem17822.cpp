@@ -46,10 +46,8 @@ int find_same(int val, int x, int y){
     int flag = 0;
     while(!q.empty()){
         //위
-        
         a = q.front().first;
         b = q.front().second;
-        //cout << "a: " << a << " b: " << b << endl;
         if(a-1 >= 0 && circle[a-1][b] == val){
             q.push_back(make_pair(a-1,b));
             circle[a-1][b] = 0;
@@ -146,33 +144,9 @@ int main(){
     for(int i = 0 ; i<T ; i++){
         cin >> x >> d >> k;
         rotation(x,d,k);
-/*
-        for(int j = 0; j<N; j++){
-            for(int k = 0; k<M; k++){
-                cout << circle[j][k]<< " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-*/
         erase_mem();
     }
-/*
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j<M; j++){
-            cout << circle[i][j]<< " ";
-        }
-        cout << endl;
-    }
-    cout << endl;*/
-/*
-    int result = 0;
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j<M; j++){
-            result += circle[i][j];
-        }
-    }
-    */
+
    int result = 0;
    result = sum_circle();
     cout << result << endl;

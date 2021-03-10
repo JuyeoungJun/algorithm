@@ -38,6 +38,5 @@ int main(){
         }
     }
     cout << N-result.size() << endl;
-    //cout << result[0] << " " << result[1] << " " << result[2] << endl;
     return 0;
 }

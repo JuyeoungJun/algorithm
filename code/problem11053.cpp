@@ -18,7 +18,7 @@ int main(){
         if(result.back() < val[i]){
             result.push_back(val[i]);
         }
-        else/* if(result.back() >= val[i])*/{
+        else{
             for(int j = result.size()-1; j>=0 ; j--){
                 if(result[j] >= val[i] && result[j-1] < val[i]){
                     result[j] = val[i];
@@ -26,16 +26,8 @@ int main(){
                 }
             }
         }
-    }/*
-    for(int i = 0; i<result.size() ; i++){
-        cout << result[i] << " ";
-    }*/
-    //cout << endl;
+    }
     cout << result.size();
     return 0;
 }
 
-/*
-8
-2 8 6 1 5 4 3 7
-*/

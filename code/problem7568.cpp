@@ -12,7 +12,7 @@ int main(){
     for(int i = 0; i < N; i++){
         arr[i] = 1;
     }
-    //pair<int,int> person;
+
     for(int i = 0; i<N ; i++){
         cin >> x >> y;
         people.push_back(make_pair(x,y));

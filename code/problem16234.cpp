@@ -9,7 +9,6 @@ using namespace std;
 int N,L,R;
 int mapp[51][51];
 int check_mapp[51][51];
-//int yeonhap[51][51];
 deque<deque<pair<int, int> > > yeonhap;
 deque<int> s;
 
@@ -21,7 +20,6 @@ int find_yeonhap(int a, int b, int k){
     temp.push_back(make_pair(a,b));
     check_mapp[a][b] = 1;
     while(1){
-        //cout << q.size() << endl;
         if(q.empty()){
             yeonhap.push_back(temp);
             return result;
@@ -69,13 +67,6 @@ int main(){
     int temp;
     int result = 0;
     while(1){
-        /*
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<N; j++){
-                cout << mapp[i][j] << " ";
-            }
-            cout << endl;
-        }*/
         for(int i = 0; i<N; i++){
             for(int j = 0; j<N; j++){
                 check_mapp[i][j] = 0;
@@ -92,20 +83,12 @@ int main(){
                 
             }
         }
-        //cout << yeonhap.size() << endl;
         if(yeonhap.size() == N*N){
             cout <<result << endl;
             break;
         }
         for(int i = 0; i<yeonhap.size(); i++){
-            //cout << "1" << endl;
-            //cout << "result = " << s[i] << endl;
             for(int j = 0; j<yeonhap[i].size(); j++){
-                /*
-                cout << "s[" << i << "]: "<< s[i] << endl;
-                cout << yeonhap[i].size()<< endl;
-                cout << s[i]/yeonhap[i].size() << endl;
-*/
                 mapp[yeonhap[i][j].first][yeonhap[i][j].second] = s[i]/yeonhap[i].size();
             }
         }

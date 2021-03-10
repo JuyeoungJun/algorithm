@@ -27,10 +27,7 @@ class song{
 };
 
 int main(){
-    //map<string, int > m;
     map<string, song> m;
-    //m.insert(make_pair("hi",1));
-    //m.insert(make_pair("hi",2));
     m["hi"] = song("test",1,1);
     cout << m["hi"].gen << endl;
     return 0;

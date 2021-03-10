@@ -29,7 +29,6 @@ int find_smallone(){
     visited[where.first][where.second] = 1;
     int flag = 0;
     while(!qu.empty()){
-        //cout << cmp_w.size() << endl;
         if(flag == 1 && d_result < dist.front()){
             where.first = cmp_w.front().first;
             where.second = cmp_w.front().second;
@@ -51,17 +50,12 @@ int find_smallone(){
         }
         a = qu.front().first;
         b = qu.front().second;
-        //cout << "a: " << a << "b: " << b << endl;
 
         if(a-1 >=0 && visited[a-1][b] == 0 && map[a-1][b] <= size){
             if(map[a-1][b] < size && map[a-1][b] > 0){
-                //where.first = a-1;
-                //where.second = b;
-                //map[a-1][b] = 0;
                 d_result = dist.front();
                 cmp_w.push_back(make_pair(a-1,b));
                 flag = 1;
-                //return dist.front()+1;
             }
             visited[a-1][b] = 1;
             qu.push_back(make_pair(a-1,b));
@@ -69,13 +63,9 @@ int find_smallone(){
         }
         if(b-1 >= 0 && visited[a][b-1] == 0 && map[a][b-1] <= size){
             if(map[a][b-1] < size && map[a][b-1] > 0){
-                //where.first = a;
-                //where.second = b-1;
-                //map[a][b-1] = 0;
                 d_result = dist.front();
                 cmp_w.push_back(make_pair(a,b-1));
                 flag = 1;
-                //return dist.front()+1;
             }
             visited[a][b-1] = 1;
             qu.push_back(make_pair(a,b-1));
@@ -83,13 +73,9 @@ int find_smallone(){
         }
         if(b+1 < N && visited[a][b+1] == 0 && map[a][b+1] <= size){
             if(map[a][b+1] < size && map[a][b+1] > 0){
-                //where.first = a;
-                //where.second = b+1;
-                //map[a][b+1] = 0;
                 d_result = dist.front();
                 cmp_w.push_back(make_pair(a,b+1));
-                flag = 1;
-                //return dist.front()+1;
+                flag = 1
             }
             visited[a][b+1] = 1;
             qu.push_back(make_pair(a,b+1));
@@ -97,13 +83,9 @@ int find_smallone(){
         }
         if(a+1 < N && visited[a+1][b] == 0 && map[a+1][b] <= size){
             if(map[a+1][b] < size && map[a+1][b] > 0){
-                //where.first = a+1;
-                //where.second = b;
-                //map[a+1][b] = 0;
                 d_result = dist.front();
                 cmp_w.push_back(make_pair(a+1,b));
                 flag = 1;
-                //return dist.front()+1;
             }
             visited[a+1][b] = 1;
             qu.push_back(make_pair(a+1,b));
@@ -121,7 +103,6 @@ int main(){
         for(int j = 0; j<N; j++){
             cin >> map[i][j];
             if(map[i][j] == 9){
-                //q.push_back(make_pair(i,j));
                 where = make_pair(i,j);
                 map[i][j] = 0;
             } 
@@ -129,8 +110,6 @@ int main(){
     }
     int temp;
     while(1){
-        //cout << "where: " << where.first << " " << where.second << endl;
-        //cout << "size: " << size << endl;
         temp = find_smallone();
         if(temp == -1){
             cout << result << endl;

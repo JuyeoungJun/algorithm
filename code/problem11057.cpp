@@ -23,15 +23,7 @@ int main(){
     int result = 0;
     for(int i = 0; i<10; i++){
         result += num[N-1][i]%10007;
-        //cout << num[N-1][i] << " ";
     }
-    //cout << endl;
     cout <<result%10007 << endl;
     return 0;
 }
-/*
-1 1 1 1 1 1 1 1 1 1
-1 2 3 4 5 6 7 8 9 10
-1 3 6 10 15 21 28 36 45 55
-1 4 10 20 
-*/

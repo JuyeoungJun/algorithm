@@ -16,7 +16,6 @@ int check_result(int arr[32][32]){
             
             where += arr[j][where];
         }
-        //cout << "i: " <<i <<"w: "<<where<< "\n" << endl;
         if(where == i){
             continue;
         }
@@ -28,40 +27,14 @@ int check_result(int arr[32][32]){
 }
 
 int find_Sol(int mline,int arr[32][32]){
-    //printf("hi\n");
-    /*
-    if(mline > 3){
-        return mi;
-    }*/
-    /*
-    int temp;
-    for(int i = 0; i<H;i++){
-        for(int j = 0; j<N; j++){
-            cout << arr[i][j] << " ";
-        }
-        cout << endl;
-    }*/
+
     for(int i = 0; i<H; i++ ){
         for(int j = 0; j<N-1; j++){
             if(arr[i][j] == 0 && arr[i][j+1] == 0 ){
                 arr[i][j] = 1;
-                arr[i][j+1] = -1;/*
-                for(int i = 0; i<H;i++){
-                    for(int j = 0; j<N; j++){
-                        cout << arr[i][j] << " ";
-                    }
-                cout << endl;
-                }*/
+                arr[i][j+1] = -1;
                
                 if(check_result(arr) == 1){
-                    /*
-                    cout << "mi: " << mi << "mline: " << mline << endl;
-                    for(int i = 0; i<H;i++){
-                        for(int j = 0; j<N; j++){
-                                cout << arr[i][j] << " ";
-                        }
-                        cout << endl;
-                    }*/
                     mi = min(mi,mline+1);
                     
                     arr[i][j] = 0;

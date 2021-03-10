@@ -22,7 +22,6 @@ int main(){
     }
     int ma = -987654321;
     int mi = 987654321;
-    //cout << sol[0];
     do{
         temp = num[0];
         for(int i = 0; i<sol.size();i++){

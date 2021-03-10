@@ -10,9 +10,7 @@ int S;
 int visited[1001];
 
 int find_sol(int where, int clipboard,int t){
-    //cout << where << " " << clipboard << " " << t << endl;
     if(where > 1000){
-        //cout << visited[S] << endl;
         result = min(result,visited[S]);
         visited[S] = result;
         return 0;

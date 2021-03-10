@@ -42,9 +42,6 @@ int main(){
                 visited[now-1] = 1;
             }
         }
-        //visited[q.front()] = 1;
-        //q.pop_front();
-        //t.pop_front();
     }
     cout << t[K] << endl;
     return 0;

@@ -14,7 +14,6 @@ int rresult = 0;
 int check_map[500][500];
 
 int check_hori(int x, int y, int s){
-    //cout << "x: " << x << " y: " << y << endl;
     int result = 0;
     result = s;
     if(y + 3 < M){
@@ -30,7 +29,6 @@ int check_hori(int x, int y, int s){
             result = max(result, s+mapp[x+1][y+i]);
         }
     }
-    //cout << "hori_result: " << result << endl;
     return result;
 }
 
@@ -50,7 +48,6 @@ int check_verti(int x,int y,int s){
             result = max(result, s+mapp[x+i][y+1]);
         }
     }
-    //cout << "verti_result: " << result << endl;
     return result;
 }
 
@@ -60,7 +57,6 @@ int check_square(int x,int y){
     result += mapp[x+1][y];
     result += mapp[x][y+1];
     result += mapp[x+1][y+1];
-    //cout << "square_result: " << result << endl;
     return result;
 }
 
@@ -111,7 +107,6 @@ int check_zig(int x,int y){
         }
         temp -= mapp[x][y+1];
     }
-    //cout << "zig_result: " << result << endl;
     return result;
     
 }
@@ -130,8 +125,6 @@ int main(){
     }
     for(int i = 0; i<N ; i++){
         for(int j = 0; j<M; j++){
-            //result = max(result,check(i,j,1,mapp[i][j]));
-            //cout << "i: " << i << " j: " << j <<endl;
             if((j+2) < M){
                 rresult = max(rresult,check_hori(i,j,mapp[i][j]+mapp[i][j+1]+mapp[i][j+2]));
             }
@@ -142,9 +135,6 @@ int main(){
                 rresult = max(rresult,check_square(i,j));
             }
             rresult = max(rresult,check_zig(i,j));
-            //cout << endl;
-            //cout <<endl <<"i: "<< i << " j: "<< j << " result: "<< result << endl;
-            //exit(1);
         }
     }
     cout << rresult << endl;

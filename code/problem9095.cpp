@@ -7,7 +7,6 @@ using namespace std;
 int result = 0;
 
 void findSol(int n){
-    //cout << n << endl;
     if(n == 0){
         result ++;
         return;

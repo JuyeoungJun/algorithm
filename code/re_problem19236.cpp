@@ -92,7 +92,6 @@ int find_sol(){
     int tempdshark = d_shark;
     int flag = 0;
     for(int i = 1; i<=3; i++){
-        //cout << "tempab: " << tempa << " " << tempb << endl;
         tempa = shark.first + dir[d_shark].first*i;
         tempb = shark.second + dir[d_shark].second*i;
         if(tempa < 0 || tempb < 0 || tempa >=4 || tempb >= 4){
@@ -110,7 +109,6 @@ int find_sol(){
                 d_shark = fish[temp].d;
                 fish[temp].alive = -1;
                 score += temp;
-                //cout << "what fish? "<<temp << endl;
                 find_sol();
                 score = tempscore;
                 shark = tempshark;

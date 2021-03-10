@@ -6,8 +6,6 @@ using namespace std;
 
 deque<pair<int, int> > dir;
 int result;
-//pair<int, int> shark;
-//int d_shark;
 deque<pair<int, int> > fish;
 deque<int> d_fish;
 int alive[17];
@@ -31,7 +29,6 @@ int find_sol(int score,pair<int,int> shark,int d_shark,int depth){
     //물고기 이동
     int temp;
     int a,b;
-    //cout << 2 << endl;
     
     for(int i = 1; i<=16; i++){
         if(alive[i] == 1){
@@ -54,7 +51,6 @@ int find_sol(int score,pair<int,int> shark,int d_shark,int depth){
     while(1){
         tempx += dir[d_shark].first;
         tempy += dir[d_shark].second;
-        //cout <<"shark: "<< shark.first << " " << shark.second << endl;
         if(tempx< 4 && tempy< 4 && tempx >=0 && tempy >= 0){
             if(map[tempx][tempy] == 0 || map[tempx][tempy] == -1){
                 continue;
@@ -94,9 +90,6 @@ int find_sol(int score,pair<int,int> shark,int d_shark,int depth){
         cout << "???" << endl;
         map[q[i].first][q[i].second] = temp;
         alive[map[q[i].first][q[i].second]] = 1;
-        
-        //map[shark.first][shark.second] = temp;
-        //alive[map[shark.first][shark.second]] = 1;
     }
     map[shark.first][shark.second] = -1;
     q.clear();

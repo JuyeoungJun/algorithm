@@ -13,24 +13,7 @@ vector<vector<int> > fina;
 
 int findResult(int depth){
     int flag = 0;
-    if(depth == M){/*
-        for(int i = 0 ; i<check.size(); i++){
-            flag = 0;
-            for(int j = 0; j<M;j++){
-                if(check[i][j] == result[j]) {
-                    flag++;
-                }
-            }
-            if(flag == M){
-                flag = 0;
-                return 0;
-            }
-        }
-        for(int i = 0; i< M ;i++){
-            printf("%d ",result[i]);
-        }
-        printf("\n");
-        */
+    if(depth == M){
         for(int i = 0; i<M ;i++){
             temp.push_back(result[i]);
         }
@@ -77,7 +60,6 @@ int main(){
                 fl ++;
             }
         }
-        //cout << fl << endl;
         if(fl == M){
             continue;
         }

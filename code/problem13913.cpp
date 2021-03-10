@@ -16,14 +16,12 @@ int main(){
     int chase;
     vector<int> pree;
     while(1){
-        //cout << q.size() << endl;
         if(q.front().first == K){
             cout << q.front().second << endl;
             chase = q.front().first;
             pree.push_back(chase);
             while(1){
                 chase = route[chase];
-                //cout << chase << endl;
                 if(chase == 0){
                     for(int i = pree.size()-1; i>=0;i--){
                         cout << pree[i] << " ";

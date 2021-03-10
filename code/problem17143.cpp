@@ -43,15 +43,12 @@ void move_shark(){
             tempmap[i][j].alive = 0;
         }
     }
-    //cout << alive_shark.size() << endl;
     for(int i = 0; i<alive_shark.size(); i++){
         int a = alive_shark[i].first;
         int b = alive_shark[i].second;
         int nextr, nextc;
         nextr = a; nextc = b;
        
-        //cout << alive_shark[i].first << " " << alive_shark[i].second << endl;
-        //cout << endl;
         int ts=0;
         if(map[a][b].d == 0 || map[a][b].d == 1){
             ts = 0;

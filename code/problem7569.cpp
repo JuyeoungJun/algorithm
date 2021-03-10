@@ -53,7 +53,6 @@ int main(){
         NN = q.front()[1];
         MM = q.front()[2];
         result = tim.front();
-        //cout << HH << " " << NN << " " << MM << " " << endl;
         if(HH+1 < H && box[HH+1][NN][MM] == 0){
             //위
             box[HH+1][NN][MM] = 1;
@@ -126,6 +125,5 @@ int main(){
     else{
         cout << -1 << endl;
     }
-    //cout << result << endl;
     return 0;
 }

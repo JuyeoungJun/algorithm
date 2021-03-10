@@ -21,14 +21,6 @@ int main(){
         cin >> tempa >> tempb;
         mapp[tempa-1][tempb-1] = 1;
     }
-    /*
-    for(int i = 0; i<N ; i++){
-        for(int j = 0; j<N ; j++){
-            cout << mapp[i][j] << " ";
-        }
-        cout << endl;
-    }
-    */
     cin >> L;
     deque<pair<int,int> > change;
     char tempc;
@@ -47,11 +39,6 @@ int main(){
     pair<int, int> direction;
     direction = make_pair(0,1);
     while(1){
-        /*
-        cout << "time: " << time << endl;
-        cout << "head: " << snake.front().first << " " << snake.front().second << endl;
-        cout << "len: " << snake.size() << endl;
-        */
         if(change.front().first == time){
             if(change.front().second == 0){
                 if(direction.second == 1){

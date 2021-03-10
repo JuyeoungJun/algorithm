@@ -7,13 +7,6 @@ using namespace std;
 
 int c,w,h;
 
-
-/*
-int fire(){
-    for(int i = 0;)
-
-}*/
-
 int main(){
     string temp;
     cin >> c;
@@ -47,23 +40,11 @@ int main(){
                 temp.pop_back();
             }
         }
-///////////////////////
         int a,b;
         int now = 0;
         int aa,bb;
         result = -1;
         while(!q.empty()){
-            /*
-            cout << q.front().first << " " << q.front().second << endl;
-            
-            for(int j = 0; j<h; j++){
-                for(int k = 0; k<w ; k++){
-                    cout << map[j][k] << " ";
-                }
-                cout << endl;
-            }
-            cout << endl;
-    */
             a = q.front().first;
             b = q.front().second;
             if(a == 0 || a == h-1 || b == 0 || b == w-1){
@@ -72,7 +53,6 @@ int main(){
             }
 
             if(ft.size() != 0 && ft.front() == tim.front()){
-                //now = tim.front();
                 while(!f.empty()){
                     if(ft.front() > tim.front()){
                         break;
@@ -106,11 +86,9 @@ int main(){
                     f.pop_front();
                     ft.pop_front();
                 }
-                //불지르기
             }
             if(map[a-1][b] == 0){
                 //위
-                //cout << "check1" << endl;
                 q.push_back(make_pair(a-1,b));
                 tim.push_back(tim.front()+1);
                 map[a-1][b] = 1;
@@ -150,11 +128,3 @@ int main(){
    
     return 0;
 }
-/*
-        for(int j = 0; j<h; j++){
-            for(int k = 0; k<w ; k++){
-                cout << map[j][k] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;*/

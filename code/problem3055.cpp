@@ -73,17 +73,6 @@ int main(){
     int now = 1;
     int tempa, tempb;
     while(1){
-        /*
-        cout << m.front() << endl;
-        cout << now << endl;
-        for(int i = 0 ; i<R ; i++){
-            for(int j = 0; j<C; j++){
-                cout << map[i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-*/
         if(q.empty()){
             cout << "KAKTUS" << endl;
             return 0;

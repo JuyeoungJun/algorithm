@@ -15,18 +15,6 @@ int find_sol(){
     int flag = 1;
     int tempa,tempb,di;
     while(1){
-        /*
-        cout << result << endl;
-        cout << r << " " << c << " " << d <<endl;
-        
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<M; j++){
-                cout << map[i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-        */
         //4방향 확인
         flag = 1;
         tempa = r;
@@ -56,7 +44,6 @@ int find_sol(){
             di = (d+2)%4;
             tempa = r+direction[di].first;
             tempb = c+direction[di].second;
-            //cout << tempa << " " << tempb << endl;
             //후진
             if(map[tempa][tempb] == 1){
                 return 0;
@@ -87,14 +74,6 @@ int main(){
     direction.push_back(make_pair(1,0));
     direction.push_back(make_pair(0,-1));
     find_sol();
-    /*
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j<M; j++){
-            cout << map[i][j] << " ";
-        }
-        cout << endl;
-    }
-*/
     cout << result-2 << endl;
     return 0;
 }

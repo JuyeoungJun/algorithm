@@ -5,32 +5,7 @@
 using namespace std;
 
 int memory[1000000];
-/*
-int findSol(int N){
-    int temp;
-    int result;
-    vector <int> wh;
-    wh.push_back(N-1);
-    if(N%3 == 0){
-        wh.push_back(N/3);
-    }
-    if(N%2 == 0){
-        wh.push_back(N/2);
-    }
-    result = 987654321;
-    for(int i = 0; i<wh.size(); i++){
-        if(memory[wh[i]] != 987654321){
-            temp = memory[wh[i]];
-        }
-        else{
-            temp = findSol(wh[i]);
-        }
-        result = min(result,temp);
-    }
-    result = result + 1;
-    return result;
-}
-*/
+
 int main(){
     int N,fin;
     cin >> N;

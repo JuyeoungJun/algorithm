@@ -18,21 +18,7 @@ int main(){
     int m = 0;
     char ch;
     char ttemp[100];
-    cin >> N >> M;/*
-    getchar();
-    for(int i = 0; i<N ; i++){
-        m = 0;
-        while(1){
-            ch = getchar();
-            if(ch == '\n'){
-                break;
-            }
-            else{
-                map[i][m] = ch - '0';
-            }
-            m++;
-        }
-    }*/
+    cin >> N >> M;
     for(int i = 0; i<N;i++){
         cin >> temp;
         for(int j = 0; j<M;j++){
@@ -40,14 +26,6 @@ int main(){
             map[i][j] = m;
         }
     }
-    /*
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j< M; j++){
-            cout << map[i][j];
-        }
-        cout << endl;
-    }
-*/
     q.push(make_pair(0,0));
     val.push(1);
     direction.push_back(make_pair(1,0));

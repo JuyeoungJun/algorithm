@@ -19,7 +19,7 @@ int calcul(){
     int flag = 0;
     vector<int> result_n;
     vector<char> result_c;
-    for(int i = 0; i<l i++){
+    for(int i = 0; i<l; i++){
         if(flag == 1){
             if(n_idx < l+1){
                 result_c

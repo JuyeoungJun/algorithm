@@ -13,21 +13,15 @@ int flag = 0;
 int temp;
 
 int findSol(int depth, int endD){
-    //printf("%d\n",endD);
     if(depth == endD){
         int change = 0;
-        //cout <<"1:" <<cmp[0] << endl;
         for(int i = 0 ; i<cmp.size(); i++){
-            //cout<< "cmp" << i << ": " << cmp[i] << " ";
             change = change*10+cmp[i];
         }
-        //cout << endl;
-        //printf("change: %d\n",change);
         if(result > abs(N-change)+endD){
             result = abs(N-change)+endD;
         }
         
-        //printf("%d\n",result);
         return 0;
     }
     for(int i = 0 ; i < nob.size(); i++){
@@ -50,14 +44,12 @@ int main(){
             arr[temp] = 1;
         }
     }
-    //printf("%d\n",arr[9]);
     for(int i = 0; i<10 ; i++){
         if(arr[i] == 0){
             nob.push_back(i);
         }
     }
     temp = N;
-    //printf("%d\n",nob.back());
     while(1){
         if(l == 0 && temp == 0){
             l ++;
@@ -69,7 +61,6 @@ int main(){
         temp/=10;
         l++;
     }
-    //printf("l: %d\n",l);
 
     result = abs(100-N);
     if(nob.empty()){
@@ -81,10 +72,6 @@ int main(){
         findSol(0,l-1);
     }
     findSol(0,l+1);
-    /*
-    if(flag == 1){
-        result += l;
-    }*/
     printf("%d\n",result);
     return 0;
 }

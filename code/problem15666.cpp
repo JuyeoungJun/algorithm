@@ -10,7 +10,6 @@ vector<int> num;
 vector<vector<int> > pre;
 int ind;
 int Sol(int depth,vector<int> result){
-    //cout << depth << endl;
     if(depth == M){
         for(int i = 0; i<ind;i++){
             if(pre[i] == result){

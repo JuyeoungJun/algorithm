@@ -48,7 +48,6 @@ int main(){
     }
     visited[0][0] = 1;
     while(1){
-        //cout << q.top().cost << " "<< q.top().x << " " << q.top().y << " " << endl;
         if(q.empty()){
             break;
         }

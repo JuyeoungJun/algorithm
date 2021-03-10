@@ -15,7 +15,6 @@ int result = 0;
 int find_connect(){
     int temp;
     while(!q.empty()){
-        //cout << q.size() << endl;
         temp = q.front();
         for(int i = 0 ; i<N ; i++){
             if(visited[i] == 1){

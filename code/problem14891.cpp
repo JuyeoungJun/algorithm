@@ -64,11 +64,7 @@ int main(){
         
     }
     int result = 0;
-    /*
-    for(int i = 0; i<4; i++){
-        result += tob[i][0]*pow(2,i);
-    }
-    cout << result << endl;*/
+
     if(tob[0][0] == 1) result += 1;
     if(tob[1][0] == 1) result += 2;
     if(tob[2][0] == 1) result += 4;

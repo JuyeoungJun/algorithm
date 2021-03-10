@@ -18,14 +18,6 @@ int main(){
     dp[2] = max(dp[2],arr[0]+arr[2]);
     int temp;
     for(int i = 3 ; i< n ; i++){
-        /*
-        temp = dp[i-1];
-        if(temp < dp[i-2]+arr[i]){
-            temp = dp[i-2]+arr[i];
-        }
-        if(temp < dp[i-3]+arr[i]+arr[i-1]){
-            temp = dp[i-3]+arr[i]+arr[i-1];
-        }*/
         dp[i] = max(dp[i-1],dp[i-2]+arr[i]);
         dp[i] = max(dp[i],dp[i-3]+arr[i]+arr[i-1]);
     }

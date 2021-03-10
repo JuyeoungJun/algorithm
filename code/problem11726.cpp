@@ -6,20 +6,7 @@ using namespace std;
 
 int square[10001];
 int result;
-/*
-void makeSol(int k){
-    if(k == 0){
-        result ++;
-        return;
-    }
-    if(k < 0){
-        return;
-    }
-    for(int i = 1; i<3; i++){
-        makeSol(k-i);      
-    }
-}
-*/
+
 
 int main(){
     int n;

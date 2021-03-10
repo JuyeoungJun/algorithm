@@ -111,11 +111,8 @@ int main(){
     }
 
     for(int i = 0; i<N ; i++){
-        //cout << "i: " << i << endl;
         result += check_hori(i);
-        //cout << "hori: "<< " result: " << result << endl;
         result += check_verti(i);
-        //cout << "verti: "<< " result: " << result << endl;
     }
     cout << result << endl;
     return 0;
