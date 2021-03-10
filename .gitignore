@@ -2,7 +2,7 @@
 .DS_Store
 .a.out.icloud
 python_study.textClipping
-code/a.out
-code/-Wno-framework-include-private-from-public
-code/a.out/dSYM
-code/.vscode
+/code/a.out
+/code/-Wno-framework-include-private-from-public
+/code/a.out/dSYM
+/code/.vscode
