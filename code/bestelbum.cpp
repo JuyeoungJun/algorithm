@@ -6,10 +6,10 @@ using namespace std;
 
 class song{
     private:
-        string gen;
         deque<int> play;
         int sum;
     public:
+        string gen;
         song(string _gen, int p,int _sum){
             gen = _gen;
             play.push_back(p);
