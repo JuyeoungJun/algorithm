@@ -30,6 +30,6 @@ int main(){
     map<string, song> m;
     m["hi"] = song("test",1,1);
     cout << m["hi"].gen << endl;
-    cout << "git test" << endl;
+    cout << "git testt" << endl;
     return 0;
 }
