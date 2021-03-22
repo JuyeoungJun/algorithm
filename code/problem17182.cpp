@@ -16,12 +16,7 @@ int answer = 987654321;
 int visited[11];
 
 void DFS(int where, int depth, int d){
-    // cout << "==================" << endl;
-    // cout << where << " " << depth << " " << d << endl;
-    // for(int i = 0; i<N; i++){
-    //     cout << visited[i] << " ";
-    // }
-    // cout << endl;
+
     if(depth == N) {
         answer = min(answer, d);
         return ;
@@ -59,12 +54,6 @@ int main(){
         }
     }
     
-    // for(int i = 0; i<N; i++){
-    //     for(int j = 0; j<N; j++){
-    //         cout << dist[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
     visited[K] = 1;
     DFS(K,1,0);
     cout << answer << endl;
