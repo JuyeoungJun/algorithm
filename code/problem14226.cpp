@@ -17,8 +17,6 @@ int find_sol(){
     while(!howmuch.empty()){
         if(howmuch.front() == S){
             result = t.front();
-            //cout << "hi" << endl;
-            //result = visited[S];
             return 0;
         }
         temph = howmuch.front();

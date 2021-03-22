@@ -25,23 +25,17 @@ void boom(int time){
         for(int j = 0; j<C ; j++){
             if(expiredTime[i][j] == time){
                 board[i][j] = '.';
-                expiredTime[i][j] = 0;
-
                 if(i+1 < R){
                     board[i+1][j] = '.';
-                    expiredTime[i+1][j] = 0;
                 }
                 if(i-1 >= 0){
                     board[i-1][j] = '.';
-                    expiredTime[i-1][j] = 0;
                 }
                 if(j-1 >= 0){
                     board[i][j-1] = '.';
-                    expiredTime[i][j-1] = 0;
                 }
                 if(j+1 < C){
                     board[i][j+1] = '.';
-                    expiredTime[i][j+1] = 0;
                 }
 
             }

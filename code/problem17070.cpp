@@ -12,7 +12,6 @@ int result = 0;
 pair<int, int> where;
 
 int find_sol(int direction){
-    //cout << "where : " << where.first << " " << where.second << endl;
     if(where.first == N-1 && where.second == N-1){
         result ++;
         return 0;

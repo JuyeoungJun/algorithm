@@ -11,7 +11,6 @@ void make_dragon(vector<pair<int, int> > &pt,int cnt,int g){
 	pair<int,int> dis;
 	pair<int,int> prev;
 	prev = make_pair(pt[pt.size()-1].first,pt[pt.size()-1].second);
-	//cout << prev.first << " " << prev.second << endl;
 	if(cnt == g) return;
 	for(int i = pt.size()-1; i>0 ; i--){
 		dis = make_pair(pt[i].first - pt[i-1].first,pt[i].second - pt[i-1].second);
@@ -44,7 +43,6 @@ int main(){
 		pt.push_back(make_pair(x,y));
 		pt.push_back(make_pair(x+dx[d],y+dy[d]));
 		make_dragon(pt,0,g);
-		//if( i == 1) exit(1);	
 	}
 	cout << endl;
 	for(int i = 0; i < 10; i++){
