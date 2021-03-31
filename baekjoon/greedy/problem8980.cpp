@@ -1,3 +1,8 @@
+/*
+    그리디 알고리즘
+    출발점에서 가까운 순으로 정렬
+    각 지점마다 실을 수 있는 박스양 계산
+*/
 #include <iostream>
 #include <deque>
 #include <algorithm>
